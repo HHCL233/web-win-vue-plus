@@ -1,6 +1,6 @@
 <template>
-    <label class="win-checkbox">
-        <input type="checkbox" class="win-checkbox-input">
+    <label class="win-toggleswitch">
+        <input type="checkbox" class="win-toggleswitch-input">
         <slot></slot>
     </label>
 </template>
@@ -8,7 +8,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 export default defineComponent({
-    name: 'WinCheckBox'
+    name: 'WinToggleSwitch'
 })
 </script>
 <script lang="ts" setup>

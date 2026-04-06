@@ -2,7 +2,8 @@
   <WinButton>
     Button
   </WinButton>
-  <WinCheckbox>Checkbox</WinCheckbox>
+  <WinCheckBox>Checkbox</WinCheckBox>
+  <WinToggleSwitch>11</WinToggleSwitch>
 </template>
 
 <script setup lang="ts">

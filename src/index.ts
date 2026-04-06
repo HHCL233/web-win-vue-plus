@@ -3,7 +3,7 @@ import './style/index.scss'
 import WinButton from './components/button.vue'
 import WinCheckbox from './components/checkbox.vue'
 
-import type { App } from 'vue'
+import type { App, Plugin } from 'vue'
 
 const components = [
     WinButton,
@@ -18,9 +18,11 @@ export function install(app: App) {
     })
 }
 
-export default {
+const WebWinVuePlus: Plugin = {
     install
 }
+
+export default WebWinVuePlus
 
 export {
     WinButton,

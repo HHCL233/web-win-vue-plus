@@ -7,6 +7,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'src/index.ts',
+      name: 'WebWinVuePlus',
+      fileName: (format) => `web-win-vue-plus.${format}.js`,
       formats: ['cjs', 'es']
     },
     rollupOptions: {

@@ -1,7 +1,3 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-. "$(dirname "$0")/common"
-
 [ -n "$CI" ] && exit 0
 
-pnpm run precommit
+./node_modules/.bin/lint-staged -c ./.husky/.lintstagedrc -q

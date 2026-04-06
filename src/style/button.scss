@@ -1,0 +1,27 @@
+.win-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 16px;
+  color:  var(--w-button-default-text);
+  background-color: var(--w-button-default-bg);
+  border: 3px solid transparent;
+  outline-offset: -3px;
+  outline: 0;
+  transition:cubic-bezier(0, 1, 1, 0) 100ms transform;
+  user-select: none;
+}
+
+.win-button:hover {
+    border: 3px solid var(--w-button-default-hover-border);
+    outline-offset: -3px;
+}
+
+.win-button:active {
+    border: 3px solid transparent;
+    outline-offset: -3px;
+    background-color: var(--w-button-default-active-bg);
+    transform:scale(0.9);
+}

@@ -1,0 +1,30 @@
+:root {
+    /* button */
+    --w-button-default-bg:#cccccc;
+    --w-button-default-text: black;
+    /* hover-button */
+    --w-button-default-hover-border: #7a7a7a;
+    /* active-button */
+    --w-button-default-active-bg: #999999;
+    /* disabled-button */
+    --w-button-default-disabled-bg: #cccccc;
+    --w-button-default-disabled-text: #a8a8a8;
+
+    /* dark-button */
+    --w-button-default-dark-bg:#333333;
+    --w-button-default-dark-text: white;
+    /* hover-dark-button */
+    --w-button-default-dark-hover-border: #6b6b6b;
+    /* active-button */
+    --w-button-default-dark-active-bg: #666666;
+    /* disabled-button */
+    --w-button-default-dark-disabled-bg: #333333;
+    --w-button-default-dark-disabled-text: #4f4f4f;
+
+
+    /* checkbox */
+    --w-checkbox-default-border: black;
+    /* active-checkbox */
+    --w-checkbox-default-active-bg: #0078d7;
+    --w-checkbox-default-active-border: #0078d7;
+}

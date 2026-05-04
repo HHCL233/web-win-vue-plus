@@ -7,6 +7,16 @@
   "main": "dist/web-win-vue-plus.cjs.js",
   "module": "dist/web-win-vue-plus.es.js",
   "types": "dist/index.d.ts",
+  "style": "dist/web-win-vue-plus.css",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/web-win-vue-plus.es.js",
+      "require": "./dist/web-win-vue-plus.cjs.js"
+    },
+    "./style": "./dist/web-win-vue-plus.css",
+    "./dist/*": "./dist/*"
+  },
   "files": [
     "dist",
     "package.json",

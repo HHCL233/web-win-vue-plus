@@ -3,13 +3,15 @@ import './style/index.scss'
 import WinButton from './components/button.vue'
 import WinCheckBox from './components/checkbox.vue'
 import WinToggleSwitch from './components/toggleswitch.vue'
+import WinSlider from './components/slider.vue'
 
 import type { App, Plugin } from 'vue'
 
 const components = [
     WinButton,
     WinCheckBox,
-    WinToggleSwitch
+    WinToggleSwitch,
+    WinSlider
 ]
 
 export function install(app: App) {
@@ -29,5 +31,6 @@ export default WebWinVuePlus
 export {
     WinButton,
     WinCheckBox,
-    WinToggleSwitch
+    WinToggleSwitch,
+    WinSlider
 }

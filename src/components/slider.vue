@@ -7,7 +7,7 @@ import { defineComponent, defineProps } from 'vue'
 export default defineComponent({
     name: 'WinSlider'
 })
-
+/**
 const props = defineProps({
     title: {
         type: String,
@@ -18,6 +18,7 @@ const props = defineProps({
         default: 0
     }
 })
+*/
 </script>
 <script lang="ts" setup>
 const model = defineModel()

@@ -12,11 +12,19 @@ export default defineConfig({
       formats: ['cjs', 'es']
     },
     rollupOptions: {
-      external: ['vue']
+      external: ['vue'],
+      output: {
+        exports: 'named'
+      }
     }
   },
   plugins: [
     vue(),
-    dts({ insertTypesEntry: true, copyDtsFiles: false })
+    dts({
+      tsconfigPath: './tsconfig.app.json',
+      insertTypesEntry: true,
+      copyDtsFiles: false,
+      include: ['src/**/*']
+    })
   ],
 })

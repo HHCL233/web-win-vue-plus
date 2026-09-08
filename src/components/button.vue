@@ -15,10 +15,10 @@ import { computed, ref, useTemplateRef } from "vue";
 
 defineOptions({ name: "WinButton" });
 
-const rotateXNumber = ref(0);
 const rotateYNumber = ref(0);
-const rotateX = computed(() => `${rotateXNumber.value}deg`);
+const rotateXNumber = ref(0);
 const rotateY = computed(() => `${rotateYNumber.value}deg`);
+const rotateX = computed(() => `${rotateXNumber.value}deg`);
 const element = useTemplateRef("button");
 
 const pointermove = (event: MouseEvent) => {
@@ -26,8 +26,8 @@ const pointermove = (event: MouseEvent) => {
   const rect = element.value.getBoundingClientRect();
   const mouseX = event.clientX - rect.left - rect.width / 2;
   const mouseY = event.clientY - rect.top - rect.height / 2;
-  rotateXNumber.value = mouseX * 0.5;
-  rotateYNumber.value = -mouseY * 1.5;
+  rotateYNumber.value = mouseX * 0.5;
+  rotateXNumber.value = -mouseY * 1.5;
 };
 
 const keydown = () => {
@@ -66,7 +66,7 @@ const keydown = () => {
   border: 3px solid transparent;
   outline-offset: -3px;
   background-color: var(--w-button-default-active-bg);
-  transform: perspective(800px) rotateY(v-bind(rotateX))
-    rotateX(v-bind(rotateY)) scale(0.95);
+  transform: perspective(800px) rotateY(v-bind(rotateY))
+    rotateX(v-bind(rotateX)) scale(0.95);
 }
 </style>

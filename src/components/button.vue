@@ -1,7 +1,7 @@
 <template>
   <button
     class="win-button"
-    @mousedown="pointermove"
+    @pointerdown="pointerdown"
     @keydown="keydown"
     ref="button"
     type="button"
@@ -21,7 +21,7 @@ const rotateY = computed(() => `${rotateYNumber.value}deg`);
 const rotateX = computed(() => `${rotateXNumber.value}deg`);
 const element = useTemplateRef("button");
 
-const pointermove = (event: MouseEvent) => {
+const pointerdown = (event: PointerEvent) => {
   if (!element.value) return;
   const rect = element.value.getBoundingClientRect();
   const mouseX = event.clientX - rect.left - rect.width / 2;
@@ -47,7 +47,7 @@ const keydown = () => {
   border: 3px solid transparent;
   outline-offset: -3px;
   outline: 0;
-  transition: ease-in 100ms transform;
+  transition: ease-out 100ms transform;
   transform-origin: center;
   user-select: none;
 }

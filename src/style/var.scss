@@ -1,46 +1,50 @@
 :root {
-    /* button */
-    --w-button-default-bg:#cccccc;
-    --w-button-default-text: black;
-    /* hover-button */
-    --w-button-default-hover-border: #7a7a7a;
-    /* active-button */
-    --w-button-default-active-bg: #999999;
-    /* disabled-button */
-    --w-button-default-disabled-bg: #cccccc;
-    --w-button-default-disabled-text: #a8a8a8;
+  /* button */
+  --w-button-default-bg: #cccccc;
+  --w-button-default-text: black;
+  /* hover-button */
+  --w-button-default-hover-border: #7a7a7a;
+  /* active-button */
+  --w-button-default-active-bg: #999999;
+  /* disabled-button */
+  --w-button-default-disabled-bg: #cccccc;
+  --w-button-default-disabled-text: #a8a8a8;
 
-    /* dark-button */
-    --w-button-default-dark-bg:#333333;
-    --w-button-default-dark-text: white;
-    /* hover-dark-button */
-    --w-button-default-dark-hover-border: #6b6b6b;
-    /* active-button */
-    --w-button-default-dark-active-bg: #666666;
-    /* disabled-button */
-    --w-button-default-dark-disabled-bg: #333333;
-    --w-button-default-dark-disabled-text: #4f4f4f;
+  /* dark-button */
+  --w-button-default-dark-bg: #333333;
+  --w-button-default-dark-text: white;
+  /* hover-dark-button */
+  --w-button-default-dark-hover-border: #6b6b6b;
+  /* active-button */
+  --w-button-default-dark-active-bg: #666666;
+  /* disabled-button */
+  --w-button-default-dark-disabled-bg: #333333;
+  --w-button-default-dark-disabled-text: #4f4f4f;
 
+  /* checkbox */
+  --w-checkbox-default-border: black;
+  /* active-checkbox */
+  --w-checkbox-default-active-bg: #0078d7;
+  --w-checkbox-default-active-border: #0078d7;
 
-    /* checkbox */
-    --w-checkbox-default-border: black;
-    /* active-checkbox */
-    --w-checkbox-default-active-bg: #0078d7;
-    --w-checkbox-default-active-border: #0078d7;
+  /* toggleswitch */
+  --w-toggleswitch-default-border: black;
+  --w-toggleswitch-default-slider: black;
+  /* active-toggleswitch */
+  --w-toggleswitch-default-active-bg: #0078d7;
+  --w-toggleswitch-default-active-border: #0078d7;
+  --w-toggleswitch-default-active-slider: white;
 
+  /* slider */
+  --w-slider-default-slider-left: #0078d7;
+  --w-slider-default-slider-right: #9f9f9f;
+  --w-slider-default-thumb: #0078d7;
+  /* active-slider */
+  --w-slider-default-thumb-active: #cbcbcb;
 
-    /* toggleswitch */
-    --w-toggleswitch-default-border: black;
-    --w-toggleswitch-default-slider: black;
-    /* active-toggleswitch */
-    --w-toggleswitch-default-active-bg: #0078d7;
-    --w-toggleswitch-default-active-border: #0078d7;
-    --w-toggleswitch-default-active-slider: white;
-    
-    /* slider */
-    --w-slider-default-slider-left: #0078d7;
-    --w-slider-default-slider-right: #9f9f9f;
-    --w-slider-default-thumb: #0078d7;
-    /* active-slider */
-    --w-slider-default-thumb-active: #cbcbcb;
+  /* tile */
+  --w-tile-default-bg: #0078d7;
+  /* hover-tile */
+  --w-tile-default-hover-border: #ffffff;
+  --w-tile-default-hover-highlight: rgba(255, 255, 255, 0.25);
 }

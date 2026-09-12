@@ -5,13 +5,15 @@
       @pointerdown="onPointerDown"
       @pointermove="onPointerMove"
       @pointerup="onPointerUp"
+      @keydown.right="onKeydownRight"
+      @keydown.left="onKeydownLeft"
       ref="slider"
+      tabindex="0"
     >
       <div class="visual-fill"></div>
       <div class="visual-thumb"></div>
     </div>
   </div>
-  <p>{{ value }}</p>
 </template>
 
 <script lang="ts" setup>
@@ -79,11 +81,27 @@ const onPointerMove = (event: PointerEvent) => {
   }
 };
 
-// 指针抬起：结束拖动
+// 结束拖动
 const onPointerUp = (event: PointerEvent) => {
   if (!element.value) return;
   element.value.releasePointerCapture(event.pointerId);
   isDragging.value = false;
+};
+
+const onKeydownRight = () => {
+  let addNumber = value.value + props.step;
+  addNumber = Number(addNumber.toFixed(getDecimalPlaces(props.step)));
+  if (addNumber <= props.max) {
+    value.value = addNumber;
+  }
+};
+
+const onKeydownLeft = () => {
+  let addNumber = value.value - props.step;
+  addNumber = Number(addNumber.toFixed(getDecimalPlaces(props.step)));
+  if (addNumber >= props.min) {
+    value.value = addNumber;
+  }
 };
 
 // 监听value变化
@@ -104,9 +122,13 @@ const fillWidth = computed(() => `${sliderProgress.value}%`);
 
 <style lang="scss" scoped>
 .win-slider {
+  appearance: none;
+  border: none;
   width: 600px;
   position: relative;
   margin: 12px 0;
+  display: block;
+  background-color: transparent;
   .visual-track {
     width: 100%;
     height: 6px;
@@ -126,54 +148,10 @@ const fillWidth = computed(() => `${sliderProgress.value}%`);
       width: 6px;
       background-color: var(--w-slider-default-thumb);
       border-radius: 8px;
+      &:active {
+        background-color: var(--w-slider-default-thumb-active);
+      }
     }
   }
-}
-
-.win-slider[type="range"]::-webkit-slider-thumb {
-  height: var(--s);
-  height: 24px;
-  width: 6px;
-  border-radius: 9999px;
-  background-color: var(--w-slider-default-thumb);
-  border-image: linear-gradient(
-      90deg,
-      var(--w-slider-default-slider-left) 50%,
-      var(--w-slider-default-slider-right) 0
-    )
-    0 1 / calc(50% - 1px) 100vw/0 calc(100vw + 0px);
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.win-slider[type="range"]::-webkit-slider-thumb:active {
-  background-color: var(--w-slider-default-thumb-active);
-}
-
-.win-slider[type="range"]::-moz-range-thumb {
-  height: 12px;
-  height: 24px;
-  width: 6px;
-  border-radius: 50%;
-  background-color: red;
-  border: none;
-  appearance: none;
-}
-
-.win-slider[type="range"]::-moz-range-progress {
-  background: var(--w-slider-default-slider-left);
-  border: none;
-  height: 4px;
-}
-
-.win-slider[type="range"]::-moz-range-track {
-  height: 4px;
-  background: var(--w-slider-default-slider-right);
-  border: none;
-  border-radius: 2px;
-}
-
-.win-slider[type="range"]::-moz-range-thumb:active {
-  background-color: var(--w-slider-default-thumb-active);
 }
 </style>

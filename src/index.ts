@@ -1,36 +1,33 @@
-import './style/index.scss'
+import "./style/index.scss";
 
-import WinButton from './components/button.vue'
-import WinCheckBox from './components/checkbox.vue'
-import WinToggleSwitch from './components/toggleswitch.vue'
-import WinSlider from './components/slider.vue'
+import WinButton from "./components/button.vue";
+import WinCheckBox from "./components/checkbox.vue";
+import WinToggleSwitch from "./components/toggleswitch.vue";
+import WinSlider from "./components/slider.vue";
+import WinTile from "./components/tile.vue";
 
-import type { App, Plugin } from 'vue'
+import type { App, Plugin } from "vue";
 
 const components = [
-    WinButton,
-    WinCheckBox,
-    WinToggleSwitch,
-    WinSlider
-]
+  WinButton,
+  WinCheckBox,
+  WinToggleSwitch,
+  WinSlider,
+  WinTile,
+];
 
 export function install(app: App) {
-    components.forEach(component => {
-        if (component.name) {
-            app.component(component.name, component)
-        }
-    })
+  components.forEach((component) => {
+    if (component.name) {
+      app.component(component.name, component);
+    }
+  });
 }
 
 const WebWinVuePlus: Plugin = {
-    install
-}
+  install,
+};
 
-export default WebWinVuePlus
+export default WebWinVuePlus;
 
-export {
-    WinButton,
-    WinCheckBox,
-    WinToggleSwitch,
-    WinSlider
-}
+export { WinButton, WinCheckBox, WinToggleSwitch, WinSlider, WinTile };

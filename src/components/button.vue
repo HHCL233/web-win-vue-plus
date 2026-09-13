@@ -27,7 +27,7 @@ const pointerdown = (event: PointerEvent) => {
   const mouseX = event.clientX - rect.left - rect.width / 2;
   const mouseY = event.clientY - rect.top - rect.height / 2;
   rotateYNumber.value = mouseX * 0.5;
-  rotateXNumber.value = -mouseY * 1.5;
+  rotateXNumber.value = -mouseY * 0.5;
 };
 
 const keydown = () => {

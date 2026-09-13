@@ -8,8 +8,6 @@ export function initEvent() {
   document.addEventListener("pointermove", (event) => {
     highlightPostion.value[0] = event.clientX;
     highlightPostion.value[1] = event.clientY;
-    console.log(highlightPostion.value);
-    console.log(11);
   });
   isInitEvent = true;
 }

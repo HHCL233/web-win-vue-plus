@@ -5,6 +5,7 @@ import WinCheckBox from "./components/checkbox.vue";
 import WinToggleSwitch from "./components/toggleswitch.vue";
 import WinSlider from "./components/slider.vue";
 import WinTile from "./components/tile.vue";
+import WinInput from "./components/input.vue";
 
 import type { App, Plugin } from "vue";
 
@@ -14,6 +15,7 @@ const components = [
   WinToggleSwitch,
   WinSlider,
   WinTile,
+  WinInput,
 ];
 
 export function install(app: App) {
@@ -30,4 +32,11 @@ const WebWinVuePlus: Plugin = {
 
 export default WebWinVuePlus;
 
-export { WinButton, WinCheckBox, WinToggleSwitch, WinSlider, WinTile };
+export {
+  WinButton,
+  WinCheckBox,
+  WinToggleSwitch,
+  WinSlider,
+  WinTile,
+  WinInput,
+};

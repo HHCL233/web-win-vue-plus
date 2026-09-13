@@ -10,9 +10,12 @@
     <WinTile></WinTile>
     <WinTile></WinTile>
   </div>
+  <WinInput />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { WinInput } from ".";
+</script>
 
 <style lang="scss" scoped>
 .tiles {

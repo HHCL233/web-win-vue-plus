@@ -134,6 +134,11 @@ const fillWidth = computed(() => `${sliderProgress.value}%`);
     height: 6px;
     background-color: var(--w-slider-default-slider-right);
     user-select: none;
+    &:active {
+      .visual-thumb {
+        background-color: var(--w-slider-default-thumb-active);
+      }
+    }
     .visual-fill {
       width: v-bind(fillWidth);
       height: 100%;

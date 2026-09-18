@@ -1,7 +1,7 @@
 <template>
   <div class="win-slider">
     <div
-      class="visual-track"
+      class="slider-trigger"
       @pointerdown="onPointerDown"
       @pointermove="onPointerMove"
       @pointerup="onPointerUp"
@@ -9,7 +9,8 @@
       @keydown.left="onKeydownLeft"
       ref="slider"
       tabindex="0"
-    >
+    ></div>
+    <div class="visual-track">
       <div class="visual-fill"></div>
       <div class="visual-thumb"></div>
     </div>
@@ -129,9 +130,26 @@ const fillWidth = computed(() => `${sliderProgress.value}%`);
   margin: 12px 0;
   display: block;
   background-color: transparent;
+  .slider-trigger {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 24px;
+    user-select: none;
+    &:active {
+      & + .visual-track {
+        .visual-thumb {
+          background-color: var(--w-slider-default-thumb-active);
+        }
+      }
+    }
+  }
+
   .visual-track {
     width: 100%;
-    height: 6px;
+    height: 2px;
     background-color: var(--w-slider-default-slider-right);
     user-select: none;
     &:active {
@@ -149,13 +167,11 @@ const fillWidth = computed(() => `${sliderProgress.value}%`);
       left: v-bind(fillWidth);
       top: 50%;
       transform: translateY(-50%);
-      height: 26px;
-      width: 6px;
+      height: 24px;
+      width: 8px;
       background-color: var(--w-slider-default-thumb);
       border-radius: 8px;
-      &:active {
-        background-color: var(--w-slider-default-thumb-active);
-      }
+      pointer-events: none;
     }
   }
 }

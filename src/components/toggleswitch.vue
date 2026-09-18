@@ -1,6 +1,6 @@
 <template>
   <label class="win-toggleswitch">
-    <input type="checkbox" class="win-toggleswitch-input" />
+    <input type="checkbox" class="win-toggleswitch-input" v-model="model" />
     <slot></slot>
   </label>
 </template>
@@ -11,7 +11,9 @@ export default defineComponent({
   name: "WinToggleSwitch",
 });
 </script>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const model = defineModel<boolean>();
+</script>
 <style lang="scss" scoped>
 .win-toggleswitch-input {
   display: none;
@@ -28,10 +30,10 @@ export default defineComponent({
 .win-toggleswitch::before {
   content: "";
   width: 42px;
-  height: 18px;
+  height: 16px;
   background-color: transparent;
   display: inline-block;
-  border: 4px solid var(--w-toggleswitch-default-border);
+  border: 2px solid var(--w-toggleswitch-default-border);
   outline-offset: -4px;
   vertical-align: middle;
   margin-right: 4px;
@@ -43,15 +45,15 @@ export default defineComponent({
   text-align: center;
   color: var(--w-toggleswitch-default-active-slider);
   font-weight: bold;
-  line-height: 18px;
+  line-height: 16px;
   background-color: var(--w-toggleswitch-default-active-bg);
-  border: 4px solid var(--w-toggleswitch-default-active-border);
+  border: 2px solid var(--w-toggleswitch-default-active-border);
 }
 
 .win-toggleswitch::after {
   content: "";
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background-color: var(--w-toggleswitch-default-slider);
   display: inline-block;
   position: absolute;

@@ -5,7 +5,7 @@ import WinCheckBox from "./components/checkbox.vue";
 import WinToggleSwitch from "./components/toggleswitch.vue";
 import WinSlider from "./components/slider.vue";
 import WinTile from "./components/tile.vue";
-import WinInput from "./components/input.vue";
+import WinTextBox from "./components/textbox.vue";
 
 import type { App, Plugin } from "vue";
 
@@ -15,7 +15,7 @@ const components = [
   WinToggleSwitch,
   WinSlider,
   WinTile,
-  WinInput,
+  WinTextBox,
 ];
 
 export function install(app: App) {
@@ -38,5 +38,5 @@ export {
   WinToggleSwitch,
   WinSlider,
   WinTile,
-  WinInput,
+  WinTextBox,
 };

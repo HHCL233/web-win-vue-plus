@@ -48,8 +48,11 @@
   --w-tile-default-hover-border: #ffffff;
   --w-tile-default-hover-highlight: rgba(255, 255, 255, 0.25);
 
-  /* input */
-  --w-input-default-border: #7a7b7b;
-  /* input-focus */
-  --w-input-default-focus-border: #0078d7;
+  /* textbox */
+  --w-textbox-default-border: #7a7b7b;
+  /* textbox-focus */
+  --w-textbox-default-focus-border: #0078d7;
+  /* textbox-icon-hover */
+  --w-textbox-icon-default-hover-color: #0078d7;
+  --w-textbox-icon-default-hover-bg: #0078d7;
 }

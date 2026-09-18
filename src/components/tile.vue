@@ -63,8 +63,8 @@ const pointerenter = () => {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   overflow: hidden;
   box-sizing: border-box;
   appearance: none;
@@ -78,8 +78,8 @@ const pointerenter = () => {
     position: absolute;
     top: 0;
     left: 0;
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     overflow: hidden;
   }
   .content {
@@ -88,15 +88,15 @@ const pointerenter = () => {
     position: absolute;
     top: 0;
     left: 0;
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     box-sizing: border-box;
     background-color: var(--w-tile-default-bg);
     pointer-events: none;
     transition: top 0.75s cubic-bezier(0.35, 0.01, 0.25, 1);
     padding: 6px;
     &.is-dynamic {
-      top: -150px;
+      top: -100px;
     }
   }
   &.tip-show {
@@ -109,10 +109,10 @@ const pointerenter = () => {
     user-select: none;
     content: "";
     position: absolute;
-    top: 150px;
+    top: 100px;
     left: 0;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background: red;
     box-sizing: border-box;
     transition: top 0.75s cubic-bezier(0.35, 0.01, 0.25, 1);

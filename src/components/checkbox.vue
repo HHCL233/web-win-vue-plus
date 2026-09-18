@@ -16,8 +16,6 @@ export default defineComponent({
 </script>
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue";
-
-
 </script>
 
 <style lang="scss" scoped>
@@ -30,11 +28,11 @@ import { Icon } from "@iconify/vue";
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 18px;
-    height: 18px;
-    line-height: 18px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
     background-color: transparent;
-    border: 4px solid var(--w-checkbox-default-border);
+    border: 2px solid var(--w-checkbox-default-border);
     .icon-accept {
       opacity: 0;
     }
@@ -44,13 +42,15 @@ import { Icon } from "@iconify/vue";
     pointer-events: none;
     width: 0;
   }
+  &:has(.win-checkbox-input:checked) .checkbox-icon:hover {
+    border: 2px solid var(--w-checkbox-default-border);
+  }
   &:has(.win-checkbox-input:checked) .checkbox-icon {
     text-align: center;
     color: white;
     font-weight: bold;
-    line-height: 18px;
     background-color: var(--w-checkbox-default-active-bg);
-    border: 4px solid var(--w-checkbox-default-active-border);
+    border: 2px solid var(--w-checkbox-default-active-border);
     .icon-accept {
       opacity: 1;
     }

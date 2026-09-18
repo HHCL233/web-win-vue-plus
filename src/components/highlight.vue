@@ -42,8 +42,8 @@ onMounted(() => {
 .highlight-shell {
   z-index: 1;
   position: absolute;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   overflow: hidden;
 }
 
@@ -52,7 +52,7 @@ onMounted(() => {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 4px;
+  padding: 2px;
   height: 100%;
   width: 100%;
   box-sizing: border-box;

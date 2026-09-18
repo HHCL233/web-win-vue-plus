@@ -1,13 +1,13 @@
 <template>
-  <label class="win-input-wrapper">
+  <label class="win-textbox-wrapper">
     <input
-      class="win-input"
-      v-model="inputContent"
+      class="win-textbox"
+      v-model="textboxContent"
       @focus="onFocus"
       @blur="onBlur"
     />
     <div
-      class="win-input-clear"
+      class="win-textbox-clear"
       v-if="hasContent && isFocus"
       @click="clearContent"
       @pointerdown.prevent
@@ -22,14 +22,13 @@
 import { ref, watch } from "vue";
 import { Icon } from "@iconify/vue";
 
-defineOptions({ name: "WinInput" });
+defineOptions({ name: "WinTextBox" });
 
-const inputContent = defineModel<string>("");
+const textboxContent = defineModel<string>();
 const hasContent = ref(false);
 const isFocus = ref(false);
 
 const onFocus = () => {
-  console.log(11);
   isFocus.value = true;
 };
 
@@ -38,37 +37,32 @@ const onBlur = () => {
 };
 
 const clearContent = () => {
-  console.log(223);
-  inputContent.value = "";
+  textboxContent.value = "";
 };
 
 watch(
-  () => inputContent.value,
+  () => textboxContent.value,
   () => {
-    if (inputContent.value?.length ?? 0 >= 1) {
-      console.log(22);
-      hasContent.value = true;
-    } else {
-      hasContent.value = false;
-    }
+    hasContent.value = (textboxContent.value?.length ?? 0) >= 1;
   },
+  { immediate: true },
 );
 </script>
 
 <style lang="scss" scoped>
-.win-input-wrapper {
+.win-textbox-wrapper {
   width: 300px;
   height: 32px;
-  outline: var(--w-input-default-border) solid 2px;
+  outline: var(--w-textbox-default-border) solid 2px;
   outline-offset: -2px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   cursor: text;
   &:focus-within {
-    outline: var(--w-input-default-focus-border) solid 2px;
+    outline: var(--w-textbox-default-focus-border) solid 2px;
   }
-  .win-input-clear {
+  .win-textbox-clear {
     height: 32px;
     width: 32px;
     background-color: transparent;
@@ -76,8 +70,22 @@ watch(
     display: flex;
     align-items: center;
     justify-content: center;
+    &:active {
+      background-color: var(--w-textbox-icon-default-hover-bg);
+      .icon-accept {
+        color: white !important;
+      }
+    }
+    &:hover {
+      .icon-accept {
+        color: var(--w-textbox-icon-default-hover-color);
+      }
+    }
+    .icon-accept {
+      color: black;
+    }
   }
-  .win-input {
+  .win-textbox {
     margin: 0 10px;
     height: 100%;
     flex: 1;

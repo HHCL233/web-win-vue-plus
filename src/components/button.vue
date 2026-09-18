@@ -26,8 +26,8 @@ const pointerdown = (event: PointerEvent) => {
   const rect = element.value.getBoundingClientRect();
   const mouseX = event.clientX - rect.left - rect.width / 2;
   const mouseY = event.clientY - rect.top - rect.height / 2;
-  rotateYNumber.value = mouseX * 0.5;
-  rotateXNumber.value = -mouseY * 0.5;
+  rotateYNumber.value = mouseX * 0.35;
+  rotateXNumber.value = -mouseY * 0.35;
 };
 
 const keydown = () => {
@@ -44,7 +44,7 @@ const keydown = () => {
   padding: 0 16px;
   color: var(--w-button-default-text);
   background-color: var(--w-button-default-bg);
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   outline-offset: -3px;
   outline: 0;
   transition: ease-out 100ms transform;
@@ -53,17 +53,17 @@ const keydown = () => {
 }
 
 .win-button:hover {
-  border: 3px solid var(--w-button-default-hover-border);
+  border: 2px solid var(--w-button-default-hover-border);
   outline-offset: -3px;
 }
 
 .win-button:focus-visible {
-  border: 3px solid var(--w-button-default-hover-border);
+  border: 2px solid var(--w-button-default-hover-border);
   outline-offset: -3px;
 }
 
 .win-button:active {
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   outline-offset: -3px;
   background-color: var(--w-button-default-active-bg);
   transform: perspective(800px) rotateY(v-bind(rotateY))

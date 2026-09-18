@@ -36,9 +36,8 @@
     "prepare": "is-ci || husky",
     "precommit": "lint-staged -c ./.husky/.lintstagedrc -q"
   },
-  "dependencies": {
-    "@iconify/vue": "^5.0.1",
-    "vue": "^3.5.30"
+  "peerDependencies": {
+    "vue": "^3.3.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
@@ -64,6 +63,8 @@
     "vite": "^8.0.1",
     "vite-plugin-dts": "^4.5.4",
     "vue-eslint-parser": "^10.4.0",
-    "vue-tsc": "^3.2.5"
+    "vue-tsc": "^3.2.5",
+    "vue": "^3.5.30",
+    "@iconify/vue": "^5.0.1"
   }
 }

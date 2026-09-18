@@ -18,16 +18,14 @@ const components = [
   WinTextBox,
 ];
 
-export function install(app: App) {
-  components.forEach((component) => {
-    if (component.name) {
-      app.component(component.name, component);
-    }
-  });
-}
-
 const WebWinVuePlus: Plugin = {
-  install,
+  install(app: App) {
+    components.forEach((component) => {
+      if (component.name) {
+        app.component(component.name, component);
+      }
+    });
+  },
 };
 
 export default WebWinVuePlus;

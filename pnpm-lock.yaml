@@ -7,13 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@iconify/vue':
-        specifier: ^5.0.1
-        version: 5.0.1(vue@3.5.32(typescript@5.9.3))
-      vue:
-        specifier: ^3.5.30
-        version: 3.5.32(typescript@5.9.3)
     devDependencies:
       '@commitlint/cli':
         specifier: ^20.5.0
@@ -24,6 +17,9 @@ importers:
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.2.0(jiti@2.6.1))
+      '@iconify/vue':
+        specifier: ^5.0.1
+        version: 5.0.1(vue@3.5.32(typescript@5.9.3))
       '@types/node':
         specifier: ^24.12.0
         version: 24.12.2
@@ -81,6 +77,9 @@ importers:
       vite-plugin-dts:
         specifier: ^4.5.4
         version: 4.5.4(@types/node@24.12.2)(typescript@5.9.3)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@24.12.2)(jiti@2.6.1)(sass@1.99.0)(yaml@2.8.3))
+      vue:
+        specifier: ^3.5.30
+        version: 3.5.32(typescript@5.9.3)
       vue-eslint-parser:
         specifier: ^10.4.0
         version: 10.4.0(eslint@10.2.0(jiti@2.6.1))

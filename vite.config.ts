@@ -1,30 +1,31 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import dts from 'vite-plugin-dts'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import dts from "vite-plugin-dts";
 
 // https://vite.dev/config/
 export default defineConfig({
   build: {
     lib: {
-      entry: 'src/index.ts',
-      name: 'WebWinVuePlus',
+      entry: "src/index.ts",
+      name: "WebWinVuePlus",
       fileName: (format) => `web-win-vue-plus.${format}.js`,
-      formats: ['cjs', 'es']
+      formats: ["cjs", "es"],
+      cssFileName: "web-win-vue-plus",
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ["vue"],
       output: {
-        exports: 'named'
-      }
-    }
+        exports: "named",
+      },
+    },
   },
   plugins: [
     vue(),
     dts({
-      tsconfigPath: './tsconfig.app.json',
+      tsconfigPath: "./tsconfig.app.json",
       insertTypesEntry: true,
       copyDtsFiles: false,
-      include: ['src/**/*']
-    })
+      include: ["src/**/*"],
+    }),
   ],
-})
+});

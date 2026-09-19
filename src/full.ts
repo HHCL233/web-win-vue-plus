@@ -6,6 +6,7 @@ import {
   WinSlider,
   WinTile,
   WinTextBox,
+  WinToolTip,
 } from "./index";
 import "./style/index.scss";
 
@@ -16,6 +17,7 @@ const components = [
   WinSlider,
   WinTile,
   WinTextBox,
+  WinToolTip,
 ];
 
 const WebWinVuePlus: Plugin = {

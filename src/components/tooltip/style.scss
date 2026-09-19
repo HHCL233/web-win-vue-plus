@@ -1,0 +1,32 @@
+.win-tooltip {
+  height: auto;
+  width: auto;
+  display: inline-block;
+  &.show-tooltip {
+    &::after {
+      opacity: 1;
+    }
+  }
+  &::after {
+    transition: opacity 300ms;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    box-sizing: border-box;
+    content: var(--content);
+    position: fixed;
+    top: var(--mouseY);
+    left: var(--mouseX);
+    transform: translate(-50%, -40px);
+    width: auto;
+    min-width: 24px;
+    height: 32px;
+    background-color: var(--w-tooltip-default-bg);
+    outline-offset: -1px;
+    outline: 1px solid var(--w-tooltip-default-border);
+    pointer-events: none;
+    opacity: 0;
+  }
+}

@@ -11,6 +11,9 @@
     <WinTile></WinTile>
   </div>
   <WinTextBox />
+  <WinToolTip content="Tooltip">
+    <div class="test-tooltip"></div>
+  </WinToolTip>
 </template>
 
 <script setup lang="ts"></script>
@@ -19,5 +22,11 @@
 .tiles {
   display: flex;
   gap: 8px;
+}
+
+.test-tooltip {
+  background-color: red;
+  width: 100px;
+  height: 100px;
 }
 </style>

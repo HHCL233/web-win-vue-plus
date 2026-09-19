@@ -5,6 +5,10 @@
     @keydown="keydown"
     ref="button"
     type="button"
+    :style="{
+      '--rotateY': rotateY,
+      '--rotateX': rotateX,
+    }"
   >
     <slot></slot>
   </button>
@@ -12,6 +16,7 @@
 
 <script lang="ts" setup>
 import { computed, ref, useTemplateRef } from "vue";
+import "./style.scss";
 
 defineOptions({ name: "WinButton" });
 
@@ -35,38 +40,3 @@ const keydown = () => {
   rotateYNumber.value = 0;
 };
 </script>
-<style lang="scss" scoped>
-.win-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 32px;
-  padding: 0 16px;
-  color: var(--w-button-default-text);
-  background-color: var(--w-button-default-bg);
-  border: 2px solid transparent;
-  outline-offset: -3px;
-  outline: 0;
-  transition: ease-out 100ms transform;
-  transform-origin: center;
-  user-select: none;
-}
-
-.win-button:hover {
-  border: 2px solid var(--w-button-default-hover-border);
-  outline-offset: -3px;
-}
-
-.win-button:focus-visible {
-  border: 2px solid var(--w-button-default-hover-border);
-  outline-offset: -3px;
-}
-
-.win-button:active {
-  border: 2px solid transparent;
-  outline-offset: -3px;
-  background-color: var(--w-button-default-active-bg);
-  transform: perspective(800px) rotateY(v-bind(rotateY))
-    rotateX(v-bind(rotateX)) scale(0.95);
-}
-</style>

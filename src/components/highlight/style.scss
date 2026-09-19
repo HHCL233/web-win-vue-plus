@@ -1,0 +1,39 @@
+.highlight-shell {
+  z-index: 1;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+}
+
+.highlight-border {
+  z-index: 1;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background: radial-gradient(
+    150px circle at var(--highlightBorderX) var(--highlightBorderY),
+    var(--w-tile-default-hover-border),
+    transparent 70%
+  );
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.highlight {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    100px circle at var(--highlightX) var(--highlightY),
+    var(--w-tile-default-hover-highlight),
+    transparent 100%
+  );
+}

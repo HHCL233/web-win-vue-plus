@@ -1,20 +1,34 @@
 {
   "name": "web-win-vue-plus",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Windows10风格Vue3组件库",
   "license": "MIT",
   "type": "module",
-  "main": "dist/web-win-vue-plus.cjs.js",
-  "module": "dist/web-win-vue-plus.es.js",
+  "main": "dist/lib/index.js",
+  "module": "dist/es/index.mjs",
   "types": "dist/index.d.ts",
-  "style": "dist/web-win-vue-plus.css",
+  "full": "dist/es/full.mjs",
+  "resolver": "dist/es/resolver.mjs",
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/web-win-vue-plus.es.js",
-      "require": "./dist/web-win-vue-plus.cjs.js"
+      "import": "./dist/es/index.mjs",
+      "require": "./dist/lib/index.js"
     },
-    "./style": "./dist/web-win-vue-plus.css",
+    "./full": {
+      "types": "./dist/full.d.ts",
+      "import": "./dist/es/full.mjs",
+      "require": "./dist/lib/full.js"
+    },
+    "./resolver": {
+      "types": "./dist/resolver.d.ts",
+      "import": "./dist/es/resolver.mjs",
+      "require": "./dist/lib/resolver.js"
+    },
     "./dist/*": "./dist/*"
   },
   "files": [
@@ -43,6 +57,7 @@
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
     "@eslint/js": "^10.0.1",
+    "@iconify/vue": "^5.0.1",
     "@types/node": "^24.12.0",
     "@vitejs/plugin-vue": "^6.0.5",
     "@vue/eslint-config-typescript": "^14.7.0",
@@ -60,11 +75,12 @@
     "lint-staged": "^16.4.0",
     "sass": "^1.99.0",
     "typescript": "~5.9.3",
+    "unplugin-vue-components": "^32.1.0",
     "vite": "^8.0.1",
     "vite-plugin-dts": "^4.5.4",
-    "vue-eslint-parser": "^10.4.0",
-    "vue-tsc": "^3.2.5",
+    "vite-plugin-lib-inject-css": "^2.2.2",
     "vue": "^3.5.30",
-    "@iconify/vue": "^5.0.1"
+    "vue-eslint-parser": "^10.4.0",
+    "vue-tsc": "^3.2.5"
   }
 }

@@ -1,5 +1,10 @@
 <template>
-  <div class="win-slider">
+  <div
+    class="win-slider"
+    :style="{
+      '--fillWidth': fillWidth,
+    }"
+  >
     <div
       class="slider-trigger"
       @pointerdown="onPointerDown"
@@ -19,7 +24,8 @@
 
 <script lang="ts" setup>
 import { computed, ref, useTemplateRef, watch, onMounted } from "vue";
-import { getDecimalPlaces } from "../utils/decimal";
+import { getDecimalPlaces } from "../../utils/decimal";
+import "./style.scss";
 
 defineOptions({ name: "WinSlider" });
 
@@ -120,59 +126,3 @@ onMounted(() => {
 
 const fillWidth = computed(() => `${sliderProgress.value}%`);
 </script>
-
-<style lang="scss" scoped>
-.win-slider {
-  appearance: none;
-  border: none;
-  width: 600px;
-  position: relative;
-  margin: 12px 0;
-  display: block;
-  background-color: transparent;
-  .slider-trigger {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 100%;
-    height: 24px;
-    user-select: none;
-    &:active {
-      & + .visual-track {
-        .visual-thumb {
-          background-color: var(--w-slider-default-thumb-active);
-        }
-      }
-    }
-  }
-
-  .visual-track {
-    width: 100%;
-    height: 2px;
-    background-color: var(--w-slider-default-slider-right);
-    user-select: none;
-    &:active {
-      .visual-thumb {
-        background-color: var(--w-slider-default-thumb-active);
-      }
-    }
-    .visual-fill {
-      width: v-bind(fillWidth);
-      height: 100%;
-      background-color: var(--w-slider-default-slider-left);
-    }
-    .visual-thumb {
-      position: absolute;
-      left: v-bind(fillWidth);
-      top: 50%;
-      transform: translateY(-50%);
-      height: 24px;
-      width: 8px;
-      background-color: var(--w-slider-default-thumb);
-      border-radius: 8px;
-      pointer-events: none;
-    }
-  }
-}
-</style>

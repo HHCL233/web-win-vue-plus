@@ -1,20 +1,3 @@
-<template>
-  <label class="win-toggleswitch">
-    <input type="checkbox" class="win-toggleswitch-input" v-model="model" />
-    <slot></slot>
-  </label>
-</template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-export default defineComponent({
-  name: "WinToggleSwitch",
-});
-</script>
-<script lang="ts" setup>
-const model = defineModel<boolean>();
-</script>
-<style lang="scss" scoped>
 .win-toggleswitch-input {
   display: none;
 }
@@ -69,4 +52,3 @@ const model = defineModel<boolean>();
   background-color: var(--w-toggleswitch-default-active-slider);
   left: calc(46px - 16px);
 }
-</style>

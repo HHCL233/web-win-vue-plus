@@ -7,6 +7,8 @@ import {
   WinTile,
   WinTextBox,
   WinToolTip,
+  WinNavigationView,
+  WinNavigationViewItem,
 } from "./index";
 import "./style/index.scss";
 
@@ -18,6 +20,8 @@ const components = [
   WinTile,
   WinTextBox,
   WinToolTip,
+  WinNavigationView,
+  WinNavigationViewItem,
 ];
 
 const WebWinVuePlus: Plugin = {

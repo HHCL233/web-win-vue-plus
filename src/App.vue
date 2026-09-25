@@ -12,8 +12,21 @@
   </div>
   <WinTextBox />
   <WinToolTip content="Tooltip">
-    <div class="test-tooltip"></div>
+    <div class="test-tooltip">ToolTip</div>
   </WinToolTip>
+  <WinNavigationView
+    :options="[
+      { label: 'NavigationView', icon: 'fluent-mdl2:play' },
+      { label: 'NavigationView', icon: 'fluent-mdl2:play' },
+      { label: 'NavigationView', icon: 'fluent-mdl2:play' },
+      { label: 'NavigationView', icon: 'fluent-mdl2:play' },
+      { label: 'NavigationView', icon: 'fluent-mdl2:play' },
+    ]"
+  >
+    <template #content>
+      <img src="https://samplelib.com/preview/png/sample-photo-1920x1080.png" />
+    </template>
+  </WinNavigationView>
 </template>
 
 <script setup lang="ts"></script>

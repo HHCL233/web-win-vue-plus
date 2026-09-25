@@ -11,13 +11,13 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 2px;
+  padding: var(--w-reveal-default-hover-border-width, 2px);
   height: 100%;
   width: 100%;
   box-sizing: border-box;
   background: radial-gradient(
     150px circle at var(--highlightBorderX) var(--highlightBorderY),
-    var(--w-tile-default-hover-border),
+    var(--w-reveal-default-hover-border),
     transparent 70%
   );
   mask:
@@ -33,7 +33,7 @@
   pointer-events: none;
   background: radial-gradient(
     100px circle at var(--highlightX) var(--highlightY),
-    var(--w-tile-default-hover-highlight),
+    var(--w-reveal-default-hover-highlight),
     transparent 100%
   );
 }

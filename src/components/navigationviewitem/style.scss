@@ -1,0 +1,37 @@
+.win-navigation-item {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 0 13px;
+  box-sizing: border-box;
+  height: 40px;
+  background-color: transparent;
+  vertical-align: middle;
+  position: relative;
+  gap: 14px;
+  user-select: none;
+  overflow: hidden;
+  &:hover {
+    background-color: var(--w-navigationview-item-default-hover-bg);
+  }
+  &:active {
+    background-color: var(--w-navigationview-item-default-active-bg);
+  }
+  .icon {
+    flex: 0 0 auto;
+  }
+  .label {
+    display: inline-block;
+    min-width: 0;
+  }
+  .reveal {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    top: 0;
+    --w-reveal-default-hover-border: rgba(0, 0, 0, 0.35);
+    --w-reveal-default-hover-highlight: rgba(255, 255, 255, 0.25);
+    --w-reveal-default-hover-border-width: 1px;
+  }
+}

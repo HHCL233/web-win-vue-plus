@@ -8,7 +8,7 @@
     @pointerenter="pointerenter"
     :class="{ 'tip-show': tipShow }"
   >
-    <highlight />
+    <WinReveal />
     <div class="border"></div>
     <div class="card">
       <div class="content" :class="{ 'is-dynamic': props.showDynamic }">
@@ -24,7 +24,7 @@
 
 <script lang="ts" setup>
 import { ref, useTemplateRef } from "vue";
-import Highlight from "../highlight";
+import WinReveal from "../reveal";
 import "./style.scss";
 
 defineOptions({ name: "WinTile" });

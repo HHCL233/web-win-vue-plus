@@ -7,3 +7,5 @@ export { default as WinSlider } from "./components/slider";
 export { default as WinTile } from "./components/tile";
 export { default as WinTextBox } from "./components/textbox";
 export { default as WinToolTip } from "./components/tooltip";
+export { default as WinNavigationView } from "./components/navigationview";
+export { default as WinNavigationViewItem } from "./components/navigationviewitem";

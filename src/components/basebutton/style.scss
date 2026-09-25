@@ -1,0 +1,16 @@
+.win-basebutton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 16px;
+  outline: 0;
+  transition: ease-out 100ms transform;
+  transform-origin: center;
+  user-select: none;
+}
+
+.win-basebutton:active {
+  transform: perspective(800px) rotateY(var(--rotateY)) rotateX(var(--rotateX))
+    scale(0.98);
+}

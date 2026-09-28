@@ -16,11 +16,13 @@
   </WinToolTip>
   <WinNavigationView
     :options="[
-      { label: 'NavigationView', icon: 'fluent-mdl2:play' },
-      { label: 'NavigationView', icon: 'fluent-mdl2:play' },
-      { label: 'NavigationView', icon: 'fluent-mdl2:play' },
-      { label: 'NavigationView', icon: 'fluent-mdl2:play' },
-      { label: 'NavigationView', icon: 'fluent-mdl2:play' },
+      { label: 'NavigationViewOption', icon: 'fluent-mdl2:play', key: '1' },
+      { label: 'NavigationViewOption', icon: 'fluent-mdl2:play', key: '2' },
+      { label: 'NavigationViewOption', icon: 'fluent-mdl2:play', key: '3' },
+      { label: 'NavigationViewOption', icon: 'fluent-mdl2:play', key: '4' },
+    ]"
+    :end-options="[
+      { label: 'NavigationViewEndOption', icon: 'fluent-mdl2:play', key: '5' },
     ]"
   >
     <template #content>

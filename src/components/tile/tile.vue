@@ -1,9 +1,6 @@
 <template>
-  <button
+  <WinBaseButton
     class="win-tile"
-    ref="tile"
-    type="button"
-    @pointermove="pointermove"
     @pointerleave="pointerleave"
     @pointerenter="pointerenter"
     :class="{ 'tip-show': tipShow }"
@@ -19,13 +16,14 @@
       </div>
     </div>
     <slot></slot>
-  </button>
+  </WinBaseButton>
 </template>
 
 <script lang="ts" setup>
-import { ref, useTemplateRef } from "vue";
+import { ref } from "vue";
 import WinReveal from "../reveal";
 import "./style.scss";
+import WinBaseButton from "../basebutton";
 
 defineOptions({ name: "WinTile" });
 const props = defineProps({
@@ -34,20 +32,7 @@ const props = defineProps({
   },
 });
 
-const tileRef = useTemplateRef("tile");
-const mouseXNumber = ref(0);
-const mouseYNumber = ref(0);
 const tipShow = ref(false);
-
-const pointermove = (event: PointerEvent) => {
-  if (!tileRef.value) return;
-  const rect = tileRef.value.getBoundingClientRect();
-  const mouseX = event.clientX;
-  const mouseY = event.clientY;
-
-  mouseXNumber.value = mouseX - rect.left;
-  mouseYNumber.value = mouseY - rect.top;
-};
 
 const pointerleave = () => {
   tipShow.value = false;

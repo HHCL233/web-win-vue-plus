@@ -20,7 +20,7 @@
           class="select-item-line"
           ref="tip-line"
           :style="{
-            '--lineTop': `${(itemPosition[currentSelect]?.[1] ?? 0) + 20}px`,
+            '--lineTop': `${(itemPosition[currentSelect ?? '']?.[1] ?? 0) + 20}px`,
           }"
         ></div>
         <div class="top-items">
@@ -68,7 +68,6 @@ interface ItemOption {
 }
 
 const isUnfold = ref(false);
-const currentSelect = ref("");
 const itemsRef = useTemplateRef("items");
 const lineRef = useTemplateRef("tip-line");
 const itemPosition = ref<Record<string, [number, number]>>({});
@@ -79,6 +78,7 @@ const props = defineProps<{
 const emit = defineEmits<{
   change: [key: string];
 }>();
+const currentSelect = defineModel<string>("");
 
 const select = (key: string) => {
   if (!lineRef.value) return;

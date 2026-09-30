@@ -8,13 +8,8 @@
   height: 100px;
   overflow: hidden;
   box-sizing: border-box;
-  appearance: none;
   border: none;
-  transition: transform 100ms ease-out;
   background-color: var(--w-tile-default-bg);
-  &:active {
-    transform: scale(0.95);
-  }
   .card {
     position: absolute;
     top: 0;

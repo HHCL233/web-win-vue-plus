@@ -24,6 +24,7 @@
     :end-options="[
       { label: 'NavigationViewEndOption', icon: 'fluent-mdl2:play', key: '5' },
     ]"
+    :is-expanded="true"
   >
     <template #content>
       <img src="https://samplelib.com/preview/png/sample-photo-1920x1080.png" />

@@ -49,7 +49,12 @@
         </div>
       </div>
     </div>
-    <div class="navigation-space"></div>
+    <div
+      class="navigation-space"
+      :style="{
+        '--spaceWidth': `${isUnfold && props.isExpanded ? 320 : 42}px`,
+      }"
+    ></div>
     <div class="page"><slot name="content"></slot></div>
   </div>
 </template>
@@ -67,24 +72,27 @@ interface ItemOption {
   key: string;
 }
 
-const isUnfold = ref(false);
 const itemsRef = useTemplateRef("items");
 const lineRef = useTemplateRef("tip-line");
 const itemPosition = ref<Record<string, [number, number]>>({});
 const props = defineProps<{
   options: ItemOption[];
   endOptions?: ItemOption[];
+  isExpanded?: boolean;
 }>();
 const emit = defineEmits<{
   change: [key: string];
 }>();
+const isUnfold = ref(props.isExpanded);
 const currentSelect = defineModel<string>("");
 
 const select = (key: string) => {
   if (!lineRef.value) return;
   currentSelect.value = key;
   emit("change", key);
-  isUnfold.value = false;
+  if (!props.isExpanded) {
+    isUnfold.value = false;
+  }
 };
 
 const itemMounted = (el: RendererNode | null, key: string) => {

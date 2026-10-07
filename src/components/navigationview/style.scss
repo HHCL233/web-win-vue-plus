@@ -33,6 +33,9 @@
         &:hover {
           background-color: var(--w-navigationview-item-default-hover-bg);
         }
+        &:active {
+          background-color: var(--w-navigationview-item-default-active-bg);
+        }
       }
     }
     .items-other {

@@ -9,6 +9,7 @@ import {
   WinToolTip,
   WinNavigationView,
   WinNavigationViewItem,
+  WinIcon,
 } from "./index";
 import "./style/index.scss";
 
@@ -22,6 +23,7 @@ const components = [
   WinToolTip,
   WinNavigationView,
   WinNavigationViewItem,
+  WinIcon,
 ];
 
 const WebWinVuePlus: Plugin = {

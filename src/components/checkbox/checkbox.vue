@@ -1,7 +1,7 @@
 <template>
   <label class="win-checkbox">
     <div class="checkbox-icon">
-      <Icon icon="fluent-mdl2:accept-medium" width="24" class="icon-accept" />
+      <IconAcceptMedium width="24" class="icon-accept" />
     </div>
     <input type="checkbox" class="win-checkbox-input" />
     <slot></slot>
@@ -15,6 +15,6 @@ export default defineComponent({
 });
 </script>
 <script lang="ts" setup>
-import { Icon } from "@iconify/vue";
+import { IconAcceptMedium } from "@iconify-prerendered/vue-fluent-mdl2";
 import "./style.scss";
 </script>

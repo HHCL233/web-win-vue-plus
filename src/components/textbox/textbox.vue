@@ -3,6 +3,8 @@
     <input
       class="win-textbox"
       v-model="textboxContent"
+      :placeholder="props.placeholder"
+      :readonly="props.readonly"
       @focus="onFocus"
       @blur="onBlur"
     />
@@ -13,14 +15,14 @@
       @pointerdown.prevent
       tabindex="1"
     >
-      <Icon icon="fluent-mdl2:clear" width="12" class="icon-accept" />
+      <IconClear width="12" class="icon-accept" />
     </div>
   </label>
 </template>
 
 <script lang="ts" setup>
 import { ref, watch } from "vue";
-import { Icon } from "@iconify/vue";
+import { IconClear } from "@iconify-prerendered/vue-fluent-mdl2";
 import "./style.scss";
 
 defineOptions({ name: "WinTextBox" });
@@ -28,6 +30,10 @@ defineOptions({ name: "WinTextBox" });
 const textboxContent = defineModel<string>();
 const hasContent = ref(false);
 const isFocus = ref(false);
+const props = defineProps<{
+  readonly?: boolean;
+  placeholder?: string;
+}>();
 
 const onFocus = () => {
   isFocus.value = true;

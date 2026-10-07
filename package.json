@@ -51,13 +51,19 @@
     "precommit": "lint-staged -c ./.husky/.lintstagedrc -q"
   },
   "peerDependencies": {
-    "vue": "^3.3.0"
+    "vue": "^3.3.0",
+    "@iconify/vue": "^5.0.1"
+  },
+  "peerDependenciesMeta": {
+    "@iconify/vue": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
     "@eslint/js": "^10.0.1",
-    "@iconify/vue": "^5.0.1",
+    "@iconify-prerendered/vue-fluent-mdl2": "^0.28.1712503060",
     "@types/node": "^24.12.0",
     "@vitejs/plugin-vue": "^6.0.5",
     "@vue/eslint-config-typescript": "^14.7.0",

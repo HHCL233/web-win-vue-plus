@@ -8,11 +8,7 @@
     >
       <div class="items-menu">
         <div class="navigation-item" @click="isUnfold = !isUnfold">
-          <Icon
-            icon="fluent-mdl2:global-nav-button"
-            width="16"
-            class="icon-nav"
-          />
+          <IconGlobalNavButton width="16" class="icon-nav" />
         </div>
       </div>
       <div class="items-other" ref="items">
@@ -59,7 +55,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { Icon } from "@iconify/vue";
+import { IconGlobalNavButton } from "@iconify-prerendered/vue-fluent-mdl2";
 import "./style.scss";
 import { ref, useTemplateRef, type RendererNode } from "vue";
 import { WinNavigationViewItem } from "../navigationviewitem";
@@ -84,7 +80,7 @@ const emit = defineEmits<{
   change: [key: string];
 }>();
 const isUnfold = ref(props.isExpanded);
-const currentSelect = defineModel<string>("");
+const currentSelect = defineModel<string>();
 
 const select = (key: string) => {
   if (!lineRef.value) return;

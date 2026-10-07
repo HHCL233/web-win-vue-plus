@@ -5,13 +5,13 @@
       fold: isFold,
     }"
   >
-    <Icon :icon="props.icon" width="16" class="icon" />
+    <WinIcon :icon="props.icon" :width="16" class="icon" />
     <span class="label">{{ props.label }}</span>
     <WinReveal class="reveal" />
   </div>
 </template>
 <script lang="ts" setup>
-import { Icon } from "@iconify/vue";
+import { WinIcon } from "../icon";
 import "./style.scss";
 import { WinReveal } from "../reveal";
 

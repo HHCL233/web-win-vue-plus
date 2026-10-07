@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@iconify/vue':
+        specifier: ^5.0.1
+        version: 5.0.1(vue@3.5.32(typescript@5.9.3))
     devDependencies:
       '@commitlint/cli':
         specifier: ^20.5.0
@@ -17,9 +21,9 @@ importers:
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.2.0(jiti@2.6.1))
-      '@iconify/vue':
-        specifier: ^5.0.1
-        version: 5.0.1(vue@3.5.32(typescript@5.9.3))
+      '@iconify-prerendered/vue-fluent-mdl2':
+        specifier: ^0.28.1712503060
+        version: 0.28.1712503060(vue@3.5.32(typescript@5.9.3))
       '@types/node':
         specifier: ^24.12.0
         version: 24.12.2
@@ -322,6 +326,11 @@ packages:
   '@humanwhocodes/retry@0.4.3':
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
+
+  '@iconify-prerendered/vue-fluent-mdl2@0.28.1712503060':
+    resolution: {integrity: sha512-kFkDSMHuttgw9RYiYGG9JrbmaSHX/1z9LYz5DD7D4OWnZQLw4gg7o9wLhDbw9ItiEGx3r6kOvW81r1gqPhKzgw==}
+    peerDependencies:
+      vue: ^3.0.0
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -2730,6 +2739,10 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.4.3': {}
+
+  '@iconify-prerendered/vue-fluent-mdl2@0.28.1712503060(vue@3.5.32(typescript@5.9.3))':
+    dependencies:
+      vue: 3.5.32(typescript@5.9.3)
 
   '@iconify/types@2.0.0': {}
 

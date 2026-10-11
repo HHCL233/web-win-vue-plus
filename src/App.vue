@@ -10,7 +10,7 @@
     <WinTile></WinTile>
     <WinTile></WinTile>
   </div>
-  <WinTextBox />
+  <WinTextBox placeholder="placeholder" />
   <WinToolTip content="Tooltip">
     <div class="test-tooltip">ToolTip</div>
   </WinToolTip>
